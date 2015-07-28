@@ -1,11 +1,3 @@
-//
-//  RecordSoundsViewController.swift
-//  Pitch Perfect Portfolio
-//
-//  Created by Matt Finley on 7/18/15.
-//  Copyright (c) 2015 Matt Finley. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 
@@ -54,7 +46,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
-        
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
@@ -87,6 +78,5 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
     }
-
 }
 

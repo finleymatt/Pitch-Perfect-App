@@ -1,15 +1,4 @@
-//
-//  RecordedAudio.swift
-//  Pitch Perfect Portfolio
-//
-//  Created by Matt Finley on 7/18/15.
-//  Copyright (c) 2015 Matt Finley. All rights reserved.
-//
-
 import Foundation
-
-
-
 
 class RecordedAudio: NSObject{
     
@@ -22,7 +11,4 @@ class RecordedAudio: NSObject{
         self.title = title
         
     }
-    
-    
-    
 }
