@@ -7,18 +7,24 @@ class PlaySoundsViewController: UIViewController {
     var audioFile:AVAudioFile!
     
     var audioPlayer:AVAudioPlayer!
+    var audioPlayer_echo:AVAudioPlayer!
     var receivedAudio: RecordedAudio!
 
     @IBOutlet weak var stopAudio: UIButton!
+    @IBOutlet weak var echoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
+        
+        audioPlayer_echo = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
 
         audioEngine = AVAudioEngine()
         audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
+        
+        
     }
     
 
@@ -67,6 +73,22 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playDarthVaderAudio(sender: UIButton) {
         stopAudio.hidden = false
         playAudioWithVariablePitch(-1000)
+    }
+    
+    @IBAction func playEchoAudio(sender: UIButton) {
+        echoLabel.hidden = false
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0;
+        audioPlayer.play()
+        
+        let delay:NSTimeInterval = 0.1//100ms
+        var playtime:NSTimeInterval
+        playtime = audioPlayer_echo.deviceCurrentTime + delay
+        
+        audioPlayer_echo.stop()
+        audioPlayer_echo.currentTime = 0
+        audioPlayer_echo.volume = 0.8;
+        audioPlayer_echo.playAtTime(playtime)
     }
     
     func playAudioWithVariablePitch(pitch: Float){

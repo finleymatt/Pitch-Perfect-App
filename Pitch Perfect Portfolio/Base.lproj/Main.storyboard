@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QmS-tA-1td">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -50,6 +49,9 @@
                                 <state key="normal" image="Chipmunk">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="299" width="100" height="100"/>
+                                </variation>
                                 <connections>
                                     <action selector="playChipmunkAudio:" destination="VxX-um-4dw" eventType="touchUpInside" id="Imj-qY-aoe"/>
                                 </connections>
@@ -59,21 +61,45 @@
                                 <state key="normal" image="Darth Vader">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="284" y="299" width="100" height="100"/>
+                                </variation>
                                 <connections>
                                     <action selector="playDarthVaderAudio:" destination="VxX-um-4dw" eventType="touchUpInside" id="UGP-KU-53u"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bh-Lf-cPp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Echo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="154" y="223" width="93" height="81"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playEchoAudio:" destination="VxX-um-4dw" eventType="touchUpInside" id="Mz2-Pj-fkt"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECHO!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2E-hG-R32">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.082352943720000002" green="0.15686275059999999" blue="0.82745105029999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="174" y="184" width="53" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9Mv-fa-LIl" firstAttribute="top" secondItem="6i6-eF-9N8" secondAttribute="bottom" constant="24" id="2Pu-KS-61Z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7eZ-3H-bQz" secondAttribute="trailing" constant="35" id="7g5-Fk-Rep"/>
-                            <constraint firstItem="3BL-as-GMd" firstAttribute="top" secondItem="fS6-gJ-qYo" secondAttribute="bottom" constant="62" id="Iuf-7i-sP0"/>
-                            <constraint firstItem="3BL-as-GMd" firstAttribute="leading" secondItem="rAt-8l-Io5" secondAttribute="leadingMargin" constant="35" id="PbL-It-M5r"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Mv-fa-LIl" secondAttribute="trailing" constant="35" id="Po2-4m-k27"/>
-                            <constraint firstItem="7eZ-3H-bQz" firstAttribute="top" secondItem="9Mv-fa-LIl" secondAttribute="bottom" constant="62" id="Q0U-0z-N3z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7eZ-3H-bQz" secondAttribute="trailing" id="7g5-Fk-Rep"/>
+                            <constraint firstItem="3BL-as-GMd" firstAttribute="top" secondItem="fS6-gJ-qYo" secondAttribute="bottom" constant="160" id="Iuf-7i-sP0"/>
+                            <constraint firstItem="3BL-as-GMd" firstAttribute="leading" secondItem="rAt-8l-Io5" secondAttribute="leadingMargin" id="PbL-It-M5r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Mv-fa-LIl" secondAttribute="trailing" id="Po2-4m-k27"/>
+                            <constraint firstItem="7eZ-3H-bQz" firstAttribute="top" secondItem="9Mv-fa-LIl" secondAttribute="bottom" constant="160" id="Q0U-0z-N3z"/>
                             <constraint firstAttribute="centerX" secondItem="SI4-Gd-bGc" secondAttribute="centerX" id="SYl-qa-ie1"/>
-                            <constraint firstItem="fS6-gJ-qYo" firstAttribute="leading" secondItem="rAt-8l-Io5" secondAttribute="leadingMargin" constant="35" id="dEb-I9-xPa"/>
+                            <constraint firstItem="fS6-gJ-qYo" firstAttribute="leading" secondItem="rAt-8l-Io5" secondAttribute="leadingMargin" id="dEb-I9-xPa"/>
                             <constraint firstItem="fS6-gJ-qYo" firstAttribute="top" secondItem="6i6-eF-9N8" secondAttribute="bottom" constant="24" id="nID-k4-B5G"/>
                             <constraint firstItem="86f-Tq-vbv" firstAttribute="top" secondItem="SI4-Gd-bGc" secondAttribute="bottom" constant="99" id="rAE-f7-MsX"/>
                         </constraints>
@@ -84,6 +110,8 @@
                                 <exclude reference="9Mv-fa-LIl"/>
                                 <exclude reference="3BL-as-GMd"/>
                                 <exclude reference="7eZ-3H-bQz"/>
+                                <exclude reference="8bh-Lf-cPp"/>
+                                <exclude reference="V2E-hG-R32"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="rAE-f7-MsX"/>
@@ -105,6 +133,8 @@
                                 <include reference="9Mv-fa-LIl"/>
                                 <include reference="3BL-as-GMd"/>
                                 <include reference="7eZ-3H-bQz"/>
+                                <include reference="8bh-Lf-cPp"/>
+                                <include reference="V2E-hG-R32"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="rAE-f7-MsX"/>
@@ -121,6 +151,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="echoLabel" destination="V2E-hG-R32" id="Qmc-SW-XYl"/>
                         <outlet property="stopAudio" destination="SI4-Gd-bGc" id="LhB-jj-Ial"/>
                     </connections>
                 </viewController>
@@ -240,6 +271,7 @@
     <resources>
         <image name="Chipmunk" width="100" height="100"/>
         <image name="Darth Vader" width="100" height="100"/>
+        <image name="Echo" width="640" height="507"/>
         <image name="Fast" width="100" height="100"/>
         <image name="Microphone" width="100" height="100"/>
         <image name="Slow" width="100" height="100"/>
